@@ -1,5 +1,6 @@
 # markDownTest
 
+
 ## How Is The Environment Established?
 When we log on to the system, the bash program starts, and reads a series of configuration scripts called startup files, which define the default environment shared by all users.
 
@@ -11,16 +12,16 @@ There are two kinds:
 
 
 ## Startup files for Login Shell Sessions
-1. __/etc/profile__    ---> A global configuration script that applies to all users.
-2. __~/.bash_profile__ ---> A user's personal startup file. It can be used to extend of override settings in the global configuration script.
-3. __~/.bash_login__ --> If ~/.bash_profile is not found, bash attempts to read this file.
-4. __~/.profile__ ---> If neither ~/.bash_profile nor ~/.bash_login is found, bash attempts to read this file. 
+1. ```/etc/profile`` - A global configuration script that applies to all users.
+2. ```~/.bash_profile``` - A user's personal startup file. It can be used to extend of override settings in the global configuration script.
+3. ```~/.bash_login``` - If ~/.bash_profile is not found, bash attempts to read this file.
+4. ```~/.profile``` - If neither ~/.bash_profile nor ~/.bash_login is found, bash attempts to read this file. 
   + This is the default file in Debian-based distributions, such as Ubuntu.
 
 
 ## Startup Files for Non_Login Shell Sessions
-1. __/etc/bash.bashrc__ ---> A global configuration script that applies to all users.
-2. __~/.bashrc__ ---> A user's personal startup file. It can be used to extend or override settings in the global configuration script.
+1. ```/etc/bash.bashrc``` - A global configuration script that applies to all users.
+2. ```~/.bashrc``` - A user's personal startup file. It can be used to extend or override settings in the global configuration script.
 
 In addition to reading the startup files above, non-login shells also inherit the environment from their parent process, usually a login shell.
 
