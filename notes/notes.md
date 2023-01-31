@@ -148,20 +148,30 @@
 
 ## How to show environment variables only?
 - To list all environment variables with their values write ```printenv``` without any arguments:
+
 ![list all environment variables](./imgs/list-all-env-vars.png)
+
+
 - To list the value of a specific environment variable write ```printenv``` followed by the variable name:
+
 ![list  a specific environment variable](./imgs/list-env-var-value.png)
 
 ## How to show both environment variables and shell variables?
 - To list all environment variables and all shell variables write ```set``` without any arguments:
+
 ![list shell and environment variables](./imgs/slist-env-and-shell-vars.png)
+
 
 ## How to convert Shell Variable to and Environment Variable?
 - You need to ```export```,making it inheritable by child processes, this shell variable.
 - Example:
   + the behavior of a shell variable before exporting it 
+
 ![shell variable without exporting](./imgs/shell-var-without-export.png)
+
+
   + the behavior of a shell variable after exporting it
+
 ![export shell variable](./imgs/shell-var-with-export.png)
  
  
@@ -173,13 +183,20 @@
 
 ## How to create aliases?
 - write ```alias``` followed by ```new command``` followed by ```='original command'```
+
 ![aliases](./imgs/create-alias.png)
+
 
 ## How to list aliases?
 - To list all aliases write ```alias``` without any arguments
+
 ![list aliases](./imgs/list-aliases.png)
+
+
 - To show to value of a specific alias write ```alias``` followed by ```alias name```
+
 ![list alias](./imgs/show-alias.png)
+
 
 ---
 ## What is a function?
@@ -191,7 +208,9 @@
 
 - In order for a function to perform the code inside it it needs to be called by just write __the name of the function__.
 - Look at the following example:
+
 ![bash-function](./imgs/creare-function.png)
+
 
 ---
 
@@ -212,9 +231,15 @@ There are two kinds:
 __So...__
 ## What is difference between Interactive Login Shell and Interactive Non-Login Shell?
 - An interactive login shell is invoked when a user login to the terminal either remotely via ssh or locally, or when Bash is launched with the --login option. 
+
 ![login shell](./imgs/login-shell.png)
+
+
 - An interactive non-login shell is invoked from the login shell, such as when typing bash in the shell prompt or when opening a new terminal tab.
+
 ![login shell](./imgs/non-login-shell.png)
+
+
 
 ## Startup files for Login Shell Sessions
 When bash is invoked as Interactive Login Shell, bash looks for the following files in order:
@@ -234,42 +259,63 @@ In addition to reading the startup files above, non-login shells also inherit th
 
 ## How to check if the shell is login shell or non-login shell?
 - if the output of the ```$0``` variable is
+
 ![$0-login](./imgs/$0-login.png)
 
 	then this shell is a login shell.
 
+
 - if the output of the ```$0``` variable is
+
 ![$0_noLogin](./imgs/$0-noLogin.png)
 
 	then this shell is a non login shell.
 
 
+
 ## When should i use ```~/.bashrc``` file?
 - Put the commands that should run every time you launch a new shell in the ```~/.bashrc``` file. This include your aliases, functions, and shell variables.
   + you can add  aliases to ```~/.bashrc``` as following:
+  
   ![add alias to .bashrc](./imgs/insert-aliases.png)
 
+
+
   + you can add functions to ```~/.bashrc``` as following: 
+  
   ![add functions to .bashrc](./imgs/add-function-bashrc.png)
 
+
+
   + you can add shell variables to ```~/.bashrc``` as following: 
+
   ![add shell variables to .bashrc](./imgs/insert-shell-vars.png)
+
 
 
 ## When should is use ```~/.bash_profile``` file?
 - Use .bash_profile to run commands that should run only once, such as environment variables.
 
   + you can add environment variables to ```~/.bash_profile``` as following: 
+
   ![add environment variables to .bashrc](./imgs/insert-env-vars.png)
+
+
 ---
 
 ## How to separate include files in .bashrc file?
 - You can just write ```source``` following by ```file path```
 - We can use this to organize our .bashrc file by for example put our alias in different file and source(include) it in .bashrc
 - You can put your aliases in different file and source it in .bashrc as folllowing:
+
 ![source aliases file](./imgs/aliases-file.png)
+
+
 - You can put your functions in different file and source it in .bashrc as folllowing:
+
 ![source aliases file](./imgs/functions0-file.png)
+
+
 ---
 ## For Your Knowledge
 [What are the Different Types of Shells in Linux?](https://www.digitalocean.com/community/tutorials/different-types-of-shells-in-linux)  
