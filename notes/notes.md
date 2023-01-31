@@ -154,7 +154,7 @@
 
 ## How to show both environment variables and shell variables?
 - To list all environment variables and all shell variables write ```set``` without any arguments:
-!(list shell and environment variables)[./imgs/slist-env-and-shell-vars.png]
+!(list shell and environment variables)(./imgs/slist-env-and-shell-vars.png)
 
 ## How to convert Shell Variable to and Environment Variable?
 - You need to ```export```,making it inheritable by child processes, this shell variable.
